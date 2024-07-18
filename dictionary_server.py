@@ -1,8 +1,11 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 import json
 import os
 
 app = Flask(__name__)
+CORS(app)
+
 
 # Load dictionary data from JSON file
 with open("dictionary.json", "r") as f:
