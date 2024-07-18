@@ -16,8 +16,7 @@ with open("dictionary.json", "r") as f:
 def get_word_definition(word):
     word = word.lower()
     matching_words = {k: v for k, v in dictionary.items() if word in k.lower()}
-
-    return jsonify(matching_words[0:50])
+    return jsonify(matching_words)
 
 
 if __name__ == "__main__":
