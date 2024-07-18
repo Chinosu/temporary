@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Install the required Python packages
-RUN pip install --no-cache-dir Flask
+RUN pip install --no-cache-dir Flask flask-cors
 
 # Expose port 5000 for the Flask app
 EXPOSE 5000
